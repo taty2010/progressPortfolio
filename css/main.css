@@ -120,14 +120,14 @@ body {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 3; /* Stay on top */
     top: 0;
     left: 0;
     background-color: rgba(34, 72, 106, 0.8);
-	background-image:  linear-gradient(
+	/*background-image:  linear-gradient(
       rgba(50, 150, 250, 0.5), 
       rgba(215, 146, 146, 0.5)
-    ),url(../img/close-up-dark-dark-green-1228133.jpg);
+    ),url(../img/close-up-dark-dark-green-1228133.jpg);*/
  	background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -173,7 +173,7 @@ button {
 
 /* The navigation menu links */
 .nav a {
-    padding: 0.5vh 0 5vh 1.8vw;
+    padding: 0.5vh 0 2.5vh 1.8vw;
     text-decoration: none;
     font-size: 25px;
     color: #fff;
@@ -207,7 +207,7 @@ button :hover {
 	grid-template-rows: 20vh 25vh 15vh 15vh 15vh 5vh;
 	grid-template-areas: 
 		"header header header"
-		"about about about "
+		"about about portrait2 "
 		". work1 ."
 		". work2 ."
 		". work3 ."
@@ -221,7 +221,7 @@ button :hover {
 .gridLayout {
 	display: grid;
 	grid-template-columns: 99.5vw;
-	grid-template-rows: 98vh 70vh repeat(6, 60vh) 20vh;
+	grid-template-rows: 98vh 70vh repeat(9, 50vh) 20vh;
 	grid-template-areas: 
 		"header"
 		"about"
@@ -231,8 +231,22 @@ button :hover {
 		"port1"
 		"port2"
 		"port3"
+		"port4"
+		"port5"
+		"port6"
 		"footer";
 }
+
+.gridAbout {
+	display: grid;
+	grid-template-columns: 99.5vw;
+	grid-template-rows: 98vh 70vh 20vh;
+	grid-template-areas: 
+		"header"
+		"about"
+		"footer";
+}
+
 
 
 /* END HEADER NAV */
@@ -249,9 +263,7 @@ button :hover {
     background-size: cover;
     position: relative;
 	height: 95vh;
-	width: 95vw;
-	margin-left: 2vw;
-	margin-top: 3vh;
+	width: 100vw;
 	grid-area: header;
 }
 
@@ -288,7 +300,7 @@ header h3 {
 
 .heroText {
 	margin-left: 40vw;
-	margin-top: 20vh;
+	margin-top: 43vh;
 	
 }
 
@@ -296,6 +308,16 @@ header h3 {
 	color:rgb(255,255,255);
 	font-weight: 700;
 	 margin-left: 4vw;
+	line-height: 7vh;
+}
+
+.topName{
+	color: rgba(255, 255, 255, 0.8);
+	font-family: 'Montserrat Alternates', sans-serif;
+	margin: 0;
+	padding-top: 2vh;
+	padding-left: 1.5vw;
+	font-size: 1.5vw
 }
 
 
@@ -321,21 +343,65 @@ header h3 {
 #about{
 	grid-area: about;
 	justify-self: center;
-	margin: 0 1vw;
-	width: 85vw;
+	width: 95vw;
+	background-image: 
+  linear-gradient(
+    to bottom,
+    hsla(200.57, 10.86%, 39.16%, 0.76) 0%,
+    hsla(205.51, 11.99%, 42.75%, 0.759) 8.1%,
+    hsla(210.43, 18.67%, 44.41%, 0.756) 15.5%,
+    hsla(213.04, 15.4%, 46.99%, 0.751) 22.5%,
+    hsla(218.22, 11.83%, 50.31%, 0.744) 29%,
+    hsla(220.67, 12.02%, 52.82%, 0.737) 35.3%,
+    hsla(232.63, 12.42%, 55.51%, 0.728) 41.2%,
+    hsla(252.68, 12.9%, 58.36%, 0.719) 47.1%,
+    hsla(311.55, 17.22%, 62.5%, 0.711) 52.9%,
+    hsla(322.83, 24.92%, 67.21%, 0.702) 58.8%,
+    hsla(329.87, 34.55%, 71.66%, 0.693) 64.7%,
+    hsla(334.49, 46.29%, 75.69%, 0.686) 71%,
+    hsla(337.57, 59.86%, 79.12%, 0.679) 77.5%,
+    hsla(339.57, 73.92%, 81.78%, 0.674) 84.5%,
+    hsla(340.71, 85.43%, 83.51%, 0.671) 91.9%,
+    hsla(0, 46%, 71%, 0.67) 100%
+  )
+, url(../img/abstract-background.jpg);
+		/**border-radius: 100% 500% 500% 600% / 0 0% 600% 600%;**/
+		box-shadow: 15px 15px 50px rgba(0,0,0,0.3);
+		background-attachment: fixed;
+		background-position:bottom;
+   		background-repeat: no-repeat;
+    	background-size: cover;
 	
 }
+
+.skills {
+	display: none;
+	font-size: 4vw;
+	text-align: center;
+}
+
+
 
 #about h2 {
 	color: #d79292;
 	padding-left: 2vw;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 8vh;
+	font-size: 6vw;
 }
 
 #about p{
-	line-height: 4vh;
-	font-size: 2.5vw;
+	line-height: 5vh;
+	font-size: 5vw;
 	margin-bottom: 4.5vh;
+	padding-left: 7vw;
 	text-align: justify;
+	width: 85vw;
+	color: #fff;
+}
+
+.portrait2 {
+	grid-area: portrait2;
 }
 
 
@@ -346,9 +412,25 @@ header h3 {
 
 
 #html, #css, #design {
-	justify-self: center;
-	justify-items: stretch;
+	margin-top: 0;
 }
+
+#html p, #css p, #design p {
+	font-size: 4vw;
+	text-align: center;
+	color: #fff;
+	padding-left: 1vw;
+	line-height: 4.5vh;
+}
+
+#html i, #css i, #design i {
+	font-size: 16vw;
+	text-align: center;
+	margin-left: 40vw;
+	margin-top: 3.5vh;
+	color: #d79292;
+}
+
 
 #html{
 	grid-area: work1;
@@ -365,15 +447,15 @@ header h3 {
 }
 
 .third-width {
-	margin-top: 1.5vh;
-	padding-bottom: 10vh;
-	height: 45vh;
-	background-color: #fdccb4;
-	width: 35vw;
+	margin-left: 4.5vw;
+	padding-bottom: 0;
+	background-color: #5a646f;
+	width: 90vw;
 	border: 1px solid #fff;
-	padding-right: 65vw;
+	height: 50vh;
+	
 }
-
+/**
 .third-width i{
 		font-size: 16vw;
 		margin-left: 40vw;
@@ -391,14 +473,22 @@ header h3 {
 	font-size: 2vw;
 	text-align: center;
 	
+}**/
+
+.third-width2 img{
+	width: 85vw;
+	margin-left: 8vw;
+	margin-bottom: 5vw;
 }
 
-
+.third-width2 p, .third-width2 h3 {
+		display: none;
+	}
 
 .third-width2 {
 	margin-top: 1.5vh;
-	padding-bottom: 10vh;
-	height: 45vh;
+	
+	
 }
 
 .third-width2 h3 {
@@ -413,35 +503,19 @@ header h3 {
 	
 }
 
-#samsung {
-	background-image: url(../img/samsung.png);
-	padding: 30vh 0 10vw 0;
-	background-position: center;
-	background-repeat: no-repeat;
-}
 
 #port2 {
 	grid-area: port2;
 }
 
-#unplugged {
-	background-image:url(../img/unplugged.png);
-	padding: 30vh 0 10vw 0;
-	background-position: center;
-	background-repeat: no-repeat;
-}
+
 
 #port3 {
 	grid-area: port3;
 	margin-bottom: 18vh;
 }
 
-#spiritedAway {
-	background-image:url(../img/spirited-away.png);
-	padding: 30vh 0 10vw 0;
-	background-position: center;
-	background-repeat: no-repeat;
-}
+
 
 #port4 {
 	grid-area: port4;
@@ -453,39 +527,46 @@ header h3 {
 	margin-bottom: 18vh;
 }
 
-.portDesc1 {
+#port6 {
+	grid-area: port6;
+	margin-bottom: 18vh;
+}
+
+#portDesc1 {
 	grid-area: text1;
 }
 
-#port2 .portDesc {
+#portDesc2 {
 	grid-area: text2;
 }
 
-#port3 .portDesc {
+#portDesc3 {
 	grid-area: text3;
 }
 
-#port4 .portDesc {
+#portDesc4 {
 	grid-area: text4;
 }
 
-#port5 .portDesc {
+#portDesc5 {
 	grid-area: text5;
 }
 
-
-footer {
-	top: 30vh;
+#portDesc6 {
+	grid-area: text6;
 }
+
+
 
 #contact {
 	grid-area: footer;
 	background-color: #5a646f;
+	width: 95.1vw;
+	margin-left: 3.4vw;
 }
 
 #contact .full-width {
 	justify-self: center;
-	grid-column-start: c2;
 }
 
 #contact-info{
@@ -601,26 +682,93 @@ a:hover {
     .sidenav a {font-size: 18px;}
 }
 
-@media only screen and (min-width:940px) {
+@media screen and (min-width:940px) {
     /* DESKTOP */
+
 	
+	
+	about {
+		width: 97%;
+		margin: auto 0;
+	}
 	
 	.gridLayout {
     transition: margin-left .5s;
 	display: grid;
 	justify-items: stretch;
 	grid-template-columns: [c1]2vw [c2]31.6vw [c3]31.6vw [c4]31.6vw [c5]2vw;
-	grid-template-rows: [r1]98.5vh [r2]80vh [r3]70vh repeat(5, 70vh) [r5]8.5vh;
+	grid-template-rows: [r1]98.5vh [r2]90vh repeat(3, 70vh) [r5]8.5vh;
 	grid-template-areas: 
 		"header header header header header"
 		". about about about ."
+		". port1 port2 port3 ."
+		". port4 port5 port6."
 		". work1 work2 work3 ."
-		". text1 text1 port1 ."
-		". port2 text2 text2 ."
-		". text3 text3 port3 ."
-		". text4 text4 port4 ."
-		". text5 text5 port5 ."
 		"footer footer footer footer footer";
+}
+	#html, #css, #design {
+	margin-top: 14.6vh;
+	padding-bottom: 10vh;
+	height: 45vh;
+	background-color: #5a646f;
+	width: 32vw;
+	margin-left: 1.3vw;
+	border: 1px solid #fff;
+	padding-right: 0;
+	
+}
+	
+/*** NAVIGATION CHANGES ***/
+	.nav {
+    height: 100%; /* 100% Full-height */
+    width: 2.5%; /* 0 width - change this with JavaScript */
+	background-color: #fff;
+	background-image: linear-gradient(
+      rgba(50, 150, 250, 0.5), 
+      rgba(215, 146, 146, 0.5)
+    );
+}
+	.oldNav {
+    background-color: rgba(34, 72, 106, 0.8);
+	background-image:  linear-gradient(
+      rgba(50, 150, 250, 0.5), 
+      rgba(215, 146, 146, 0.5)
+    ),url(../img/close-up-dark-dark-green-low-res.jpg);
+ 	background-repeat: no-repeat;
+    background-size: cover;
+	}
+
+	
+	#fullMenu {
+		display: none;
+	}
+	
+	#partialMenu{
+		padding-top: 20.2vh;
+	}
+	
+	#partialMenu a{
+		margin: 0;
+		padding-left: 0;
+		font-size: 1.2vw;
+		color: #5a646f;
+	}
+	
+	#partialMenu a:hover{
+		color: #fff;
+		font-size: 1.8vw;
+	}
+	
+	#fullMenu .nav a {
+    padding: 0.5vh 0 0 1.8vw;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+	text-align-last: center;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-weight: 600;
 }
 	
 
@@ -637,14 +785,22 @@ a:hover {
 	
 #openNav {
 	display: contents;
-	font-size: 2.5vw;
 	align-self: center;
 	
 }
+	#openNav i:hover{
+		color: #fdccb4;
+		transition: 1s;
+		cursor: pointer;
+	}
 	
 	#openNav i {
-		margin-left: 5.5vw;
-		margin-top: 2.5vh;
+		margin-left: 0.4vw;
+		margin-top: 1.5vh;
+		position: fixed;
+		z-index: 4;
+		font-size: 1.8vw;
+		color: #fff;
 	}
 	
 	#closeNav{
@@ -653,14 +809,14 @@ a:hover {
 	}
 	
 	#closeNav i {
-		margin-left: 45vw;
+		margin-left: 16vw;
 	}
 	
 	
 	svg {
-	display: block;
 	margin: 0 auto;
 	margin-bottom: 0.5vh;
+	display: none;
 }
 
 
@@ -670,17 +826,22 @@ a:hover {
 	margin-left: 8vw;
 	font-size: 1.5vw;
 }
+
+
+	
+/*** END NAVIGATION CHANGES ***/
+
 	
 	.hero {
-	background-image: linear-gradient(rgba(34, 72, 106, 0.6), rgba(0, 0, 0, 0.6)), url("../img/blur-bottle-bright-273238.jpg");
+	background-image: linear-gradient(rgba(34, 72, 106, 0.6), rgba(0, 0, 0, 0.8)), url("../img/blur-bottle-bright-low-res.jpg");
 	background-position:bottom;
 	background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-	height: 95vh;
-	width: 98vw;
-	margin-left: 0.5vw;
+	height: 99vh;
+	width: 95vw;
+	margin-left: 3.2vw;
 	margin-top: 1.5vh;
 	grid-area: header;
 }
@@ -688,57 +849,177 @@ a:hover {
 	header h1 {
 	font-size: 4.5vw;
 	font-weight: 200;
-	line-height: 10vh;
+	line-height: 11vh;
+	width: 35vw;
 }
 	
 	.heroText {
 	margin-left: 40vw;
-	margin-top: 20vh;
-	
+	padding-top: 4vh;
+	margin-top: 0;
+	width: 50vw;
 }
 
 .name{
 	color:rgb(255,255,255);
 	font-weight: 700;
 	 margin-left: 4vw;
+	line-height: 13vh;
 }
+
+#down{
+	font-size: 3vw;
+	margin-left: 10vw;
+	margin-top: 7vh;
+}
+
+#down:hover{
+	margin-top: 9vh;
+	transition: 0.8s;
+}
+
 	
 	#about {
-		width: 95vw;
+		width: 94.5vw;
+		margin-top: 5vh;
+		margin-bottom: 3vh;
+		margin-left: 2vw;
+		background-color: #d79292;
+		display: flex;
+		background-image: 
+  linear-gradient(
+    to bottom,
+    hsla(220, 15.08%, 35.1%, 0.81) 0%,
+    hsla(220.99, 14.71%, 35.24%, 0.809) 8.1%,
+    hsla(224.03, 13.67%, 35.65%, 0.806) 15.5%,
+    hsla(229.55, 12.12%, 36.28%, 0.801) 22.5%,
+    hsla(238.74, 10.19%, 37.09%, 0.794) 29%,
+    hsla(251.52, 10.14%, 37.32%, 0.787) 35.3%,
+    hsla(265.04, 10.34%, 37.48%, 0.778) 41.2%,
+    hsla(278.68, 10.54%, 37.66%, 0.769) 47.1%,
+    hsla(291.89, 10.75%, 37.83%, 0.761) 52.9%,
+    hsla(303.99, 11.65%, 38.3%, 0.752) 58.8%,
+    hsla(312.29, 13.63%, 39.27%, 0.743) 64.7%,
+    hsla(317.73, 15.34%, 40.14%, 0.736) 71%,
+    hsla(321.36, 16.74%, 40.88%, 0.729) 77.5%,
+    hsla(323.7, 17.79%, 41.46%, 0.724) 84.5%,
+    hsla(325.05, 18.46%, 41.83%, 0.721) 91.9%,
+    hsla(325.5, 18.69%, 41.96%, 0.72) 100%
+  )
+, url(../img/abstract-background.jpg);
+		/**border-radius: 100% 500% 500% 1000% / 0 0% 1000% 1000%;**/
+		box-shadow: 15px 15px 50px rgba(0,0,0,0.3);
+		-webkit-box-shadow: 0px 10px 20px 8px rgba(204,219,227,1);
+-moz-box-shadow: 0px 10px 20px 8px rgba(204,219,227,1);
+box-shadow: 0px 32px 20px -9px rgba(95,130,148,0.2), inset 1px -39px 61px -8px rgba(255,255,255,0.45);
+		background-attachment: fixed;
+		background-position:bottom;
+   		background-repeat: no-repeat;
+    	background-size: cover;
+		}
+	
+	.drip{
+		animation: drip 10s 1;
+		overflow: hidden;
+		}
+	
+		@keyframes drip {
+		0% {
+			border-radius: 100% 500% 500% 600% / 0 0% 500% 500%;
+			box-shadow 15px 15px 50px rgba(0,0,0,0.2)
+			height:
+		}
+		25% { 
+			border-radius 0 0 200% 690% / 10% 10% 880% 790%
+		}
+		50% {
+			border-radius 0 0 150% 500% / 15% 17% 750% 645%
+			box-shadow -10px -5px 50px rgba(0,0,0,0.2)
+		}
+		75% {
+			border-radius 0 0 58% 42% / 20% 22% 832% 737%		
+		}
+		85% {
+			border-radius 0 0 58% 42% / 10% 12% 632% 637%		
+		}
+		100% {
+				border-radius 0 0 0 0 / 10% 12% 20% 20%
+			}
 	}
 	
+.aboutTitle{
+	width: 30vw;
+	
+}
 	#about h2 {
 	color: #d79292;
-	padding-left: 2vw;
+	padding-left: 5vw;
+	font-size: 5vw;
+	width: 45vw;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-weight: bolder;
 }
 
 	#about p{
-	font-size: 2vw;
+	color: #fff;
+	line-height: 7vh;
+	font-size: 2.6vw;
+	padding-left:5vw;
+	margin-bottom: 4.5vh;
 	text-align: justify;
-	line-height: 6vh;
-	padding: 2vw 2.5vw 0 2.5vw;
-	}
+	font-weight:700;
+	width: 45vw;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#skillsSection{
+	margin-left: 20vw;
+}
+
+.skills {
+	display: none;
+	font-size: 1.5vw;
+	text-align: center;
+	color: #fff;
+	line-height: 30vh;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-weight: 900;
+}
+
+.photo {
+	
+	margin-left: 34vw;
+	order: 2;
+	width: 40vw;
+	max-height: 45vh;
+	margin-top: 15vh;
+	margin-right: 20vw;
+}
 	
 	.third-width {
-	margin-top: 1.5vh;
+	margin-top: 14.6vh;
 	padding-bottom: 10vh;
 	height: 45vh;
-	background-color: #fdccb4;
-	width: 35vw;
+	background-color: #5a646f;
+	width: 32vw;
+	margin-left: 3vw;
 	border: 1px solid #fff;
-		padding-right: 0;
+	padding-right: 0;
 }
 
 .third-width p {
 	font-size: 1.2vw;
 	text-align: justify;
 	padding-left: 6.5vw;
+	color:#fff;
 	
 }
 
 .third-width h3 {
+	margin: 0;
 	font-size: 2vw;
 	text-align: center;
+	color: #d79292;
 	
 	
 }
@@ -748,6 +1029,23 @@ a:hover {
 		margin-left: 0;
 		margin-top: 2.5;
 	}
+
+
+
+
+#html p, #css p, #design p {
+	font-size: 1.2vw;
+	text-align: justify;
+	padding-left: 6.5vw;
+	color:#fff;
+}
+
+#html i, #css i, #design i {
+	font-size: 5.8vw;
+	margin-left: 0;
+		margin-top: 2.5;
+	text-align: center;
+}
 	
 	
 	#port1 {
@@ -755,9 +1053,27 @@ a:hover {
 	
 }
 
+	#port1, #port2, #port3{
+		padding-top: 10vh;
+	}
+
+.third-width2 img {
+	margin-left: 0;
+	width: 23vw;
+	max-width: 50vw;
+	opacity: 0.8;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+	margin-top: 5vh
+}
+
+.third-width2 img:hover{
+	opacity: 1;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+	
+}
+
 #samsung {
-	background-image: url(../img/samsung.png);
-	padding: 30vh 0 10vw 0;
+	padding: 0 0 10vw 0;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -767,8 +1083,7 @@ a:hover {
 }
 
 #unplugged {
-	background-image:url(../img/unplugged.png);
-	padding: 30vh 0 10vw 0;
+	padding: 0 0 10vw 0;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -776,18 +1091,32 @@ a:hover {
 #port3 {
 	grid-area: port3;
 	margin-bottom: 18vh;
+	height: 68.2vh;
 }
 
 #spiritedAway {
-	background-image:url(../img/spirited-away.png);
-	padding: 30vh 0 10vw 0;
+	padding: 0 0 10vw 0;
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+.third-width2{
+	padding-left: 3.5vw;
 	
-	.portDesc {
-	justify-self: flex-start;
 }
+	
+	.third-width2 p{
+		width: 50vw;
+		padding-left: 4vw;
+		text-align: center;
+	}
+	.third-width2 p, .third-width2 h3{
+		padding-top: 4vh;
+	}
+
+.third-width2 p, .third-width2 h3 {
+		display: none;
+	}
 
 
 }
@@ -807,7 +1136,7 @@ a:hover {
 	.gridLayout {
 		display: grid;
 	grid-template-columns: 99.5vw;
-	grid-template-rows: 98vh 70vh repeat(6, 60vh) 20vh;
+	grid-template-rows: 98vh 70vh repeat(9, 60vh) 20vh;
 	grid-template-areas: 
 		"header"
 		"about"
@@ -817,6 +1146,9 @@ a:hover {
 		"port1"
 		"port2"
 		"port3"
+		"port4"
+		"port5"
+		"port6"
 		"footer";
 }
 	
@@ -866,25 +1198,19 @@ a:hover {
 	}
 	
 
-#samsung {
+#samsung, #unplugged, #spiritedAway, #101-project, #lolcat, #maps{
 	background-size: cover;
-	padding: 10vh 0 30vw 0;
-	margin: 0 10vh;
+	margin: 10vh 0 30vw 25vw;
 }
 
+	.third-width2{
+		margin: 10vh 0 30vw 25vw;
+	}
 
-#unplugged {
-	background-size: cover;
-	padding: 30vh 0 10vw 0;
-	margin: 0 10vh;
-}
-
-
-#spiritedAway {
-	background-size: cover;
-	padding: 10vh 0 30vw 0;
-	margin: 0 10vh;
-}
+	
+	.third-width2 p, .third-width2 h3 {
+		display: none;
+	}
 	
 }
 
