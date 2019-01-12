@@ -268,7 +268,7 @@ header h1 {
 
 /* Front-End hero text */
 .front {
-	color:rgba(215, 146, 146);
+	color:rgb(215, 146, 146);
 	font-weight: 500;
 	font-family: 'Montserrat', sans-serif;
 }
