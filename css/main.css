@@ -105,6 +105,8 @@ body {
 	background-color: #fff;
 	color: #5a646f;
 	font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* HEADER NAV */
@@ -591,6 +593,10 @@ a:hover {
 
 @media screen and (min-width:940px) and (-webkit-min-device-pixel-ratio: 1) {
     /* DESKTOP */
+body {
+  margin: 0;
+  padding: 0;
+}
 	about {
 		width: 97%;
 		margin: auto 0;
@@ -853,10 +859,10 @@ a:hover {
 
 	.photo {
 	display: block;
-	margin-left: 34vw;
+	padding-left: 30vw;
 	order: 2;
-	width: 20vw;
-	height: 40vh;
+	width: 30vw;
+	height: auto;
 	max-height: 45vh;
 	margin-top: 15vh;
 	margin-right: 20vw;
@@ -1040,9 +1046,9 @@ a:hover {
 	}
 
 	.nav a {
-    padding: 2.5vh 0 9vh 0;
+    padding: 2vh 0 9vh 0;
     text-decoration: none;
-    font-size: 5vw;
+    font-size: 3.8vw;
 }
 	#partialMenu{
 		display: none;
@@ -1050,7 +1056,7 @@ a:hover {
 
 	.menuPhoto{
     width: 25vw;
-		margin-left: 28vw;
+		margin-left: 32vw;
 		padding-bottom: 3vh;
 	}
 
