@@ -119,15 +119,31 @@ body {
     top: 0;
     left: 0;
     background-color: rgba(34, 72, 106, 0.8);
-	background-image:  linear-gradient(
-      rgba(50, 150, 250, 0.5),
-      rgba(215, 146, 146, 0.5)
-    ),url(../img/close-up-dark-dark-green-1228133.jpg);
+    background-image:  -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(50, 150, 250, 0.5)),
+        to(rgba(215, 146, 146, 0.5))
+      ),url(../img/close-up-dark-dark-green-1228133.jpg);
+  	background-image:  -webkit-linear-gradient(
+        rgba(50, 150, 250, 0.5),
+        rgba(215, 146, 146, 0.5)
+      ),url(../img/close-up-dark-dark-green-1228133.jpg);
+  	background-image:  -o-linear-gradient(
+        rgba(50, 150, 250, 0.5),
+        rgba(215, 146, 146, 0.5)
+      ),url(../img/close-up-dark-dark-green-1228133.jpg);
+  	background-image:  linear-gradient(
+        rgba(50, 150, 250, 0.5),
+        rgba(215, 146, 146, 0.5)
+      ),url(../img/close-up-dark-dark-green-1228133.jpg);
  	background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 2.5vh; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    -webkit-transition: 0.5s;
+   -o-transition: 0.5s;
 }
 
 button {
@@ -166,6 +182,8 @@ button {
     color: #fff;
     display: block;
     transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
 	text-align-last: center;
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-weight: 600;
@@ -211,7 +229,9 @@ button :hover {
 .gridLayout {
 	display: grid;
 	grid-template-columns: 99.5vw;
+  -ms-grid-columns: 99.5vw;
 	grid-template-rows: 98vh 70vh repeat(9, 50vh) 20vh;
+  -ms-grid-rows: 98vh 70vh (50vh)[9] 20vh;
 	grid-template-areas:
 		"header"
 		"about"
@@ -242,11 +262,15 @@ button :hover {
 
 .hero {
 	background-image: linear-gradient(rgba(34, 72, 106, 0.6), rgba(0, 0, 0, 0.6)), url("../img/blur-bottle-bright-273238.jpg");
-	background-position:bottom;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 72, 106, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../img/blur-bottle-bright-273238.jpg");
+  background-image: -webkit-linear-gradient(rgba(34, 72, 106, 0.6), rgba(0, 0, 0, 0.6)), url("../img/blur-bottle-bright-273238.jpg");
+  background-image: -o-linear-gradient(rgba(34, 72, 106, 0.6), rgba(0, 0, 0, 0.6)), url("../img/blur-bottle-bright-273238.jpg");
+  background-image: linear-gradient(rgba(34, 72, 106, 0.6), rgba(0, 0, 0, 0.6)), url("../img/blur-bottle-bright-273238.jpg");
+  background-position:bottom;
 	background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 	height: 95vh;
 	width: 100vw;
 	grid-area: header;
@@ -334,7 +358,6 @@ header h1 {
     hsla(0, 46%, 71%, 0.67) 100%
   )
 , url(../img/abstract-background-lowres.png);
-		/**border-radius: 100% 500% 500% 600% / 0 0% 600% 600%;**/
 		box-shadow: 15px 15px 50px rgba(0,0,0,0.3);
 		background-attachment: fixed;
 		background-position:bottom;
