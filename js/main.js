@@ -14,7 +14,9 @@ $(document).ready(function(){
 		$('head').append('<style type="text/css">@media screen and (min-width:940px){ .nav { width: 20%} #wrapper{margin-left: 0}}</style>');	
 	});
 	
-	$('#closeNav').click(function(){
+	var closeNav = $('#closeNav');
+	
+	function onClick(){
 		$('#openNav').fadeIn("slow"); /*** Fades in burger menu ***/
 		$('nav').removeClass('oldNav'); /*** removes background image ***/
 		$('#partialMenu').fadeIn('fast'); /*** Adds small menu icons ***/
@@ -28,7 +30,8 @@ $(document).ready(function(){
 		$('head').append('<style type="text/css">@media all and (min-width: 768px) and (max-width:939px){ .nav {width: 0} #wrapper{display: contents}}</style>');
 		/****** Desktop ******/
 		$('head').append('<style type="text/css">@media screen and (min-width:940px){ .nav { width: 2.5vw} #wrapper{margin-left: 0%}}</style>');
-	});
+	}
+	closeNav.on('click', onClick);
 	
 	$('#openNavMobile').click(function(){/** Nav Click function***/
 		$('.nav').css("width", "100%"); /*** decreases size of main page***/
@@ -42,6 +45,16 @@ $(document).ready(function(){
 		$('#wrapper').fadeIn(1000);	
 		/****** Phone ******/		
 	});
+	
+	var linkClick = $('#fullMenu a');
+	linkClick = true;
+	
+	$('#fullMenu').click(function(){
+		if (linkClick === true){
+			onClick();
+		}
+	});
+	
 	
 	if ( $(window).width()>950){
 	
