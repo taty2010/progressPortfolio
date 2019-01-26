@@ -13,43 +13,10 @@ $(document).ready(function(){
 		/****** Desktop ******/
 		$('head').append('<style type="text/css">@media screen and (min-width:940px){ .nav { width: 20%} #wrapper{margin-left: 0}}</style>');
 	});
-<<<<<<< HEAD
 
-$('#openNav').bind('click.openNavClick',function(){openNavClick();});
-$('#openNav').bind('click.closeNavClick',function(){closeNavClick();});
-
-var linkClick = true;
-		$('#fullMenu li a').click(function(){
-			if(linkClick === true){
-				linkClick = false;
-				$('.nav').css('width', '2.5vw');
-				$('#openNav').fadeIn("slow");
-				$('#wrapper').css({'margin-left': '0', 'opacity': '1'});
-				$('#fullMenu').fadeOut('fast');
-				$('#partialMenu').fadeIn('fast');
-				$('body').css('background-color', '#FFF');
-			}
-
-			else{
-				linkClick = true;
-				$('#openNav').fadeIn("slow"); /*** Fades in burger menu ***/
-				('.nav').css('width', '20%');
-				$('nav').removeClass('oldNav'); /*** removes background image ***/
-				$('#partialMenu').fadeIn('fast'); /*** Adds small menu icons ***/
-				$('#fullMenu').fadeOut('fast');
-				$("#wrapper").removeAttr('style');
-				$(".hero").removeAttr('style').css("transition", "1");
-				$('#wrapper').removeClass("navGrid").addClass("gridLayout");
-			}
-		});
-
-	$('#closeNav').click(function(closeNavClick){
-=======
-	
 	var closeNav = $('#closeNav');
-	
+
 	function onClick(){
->>>>>>> b80834c7db506a38b48cbe741d476f5428e1937a
 		$('#openNav').fadeIn("slow"); /*** Fades in burger menu ***/
 		$('nav').removeClass('oldNav'); /*** removes background image ***/
 		$('#partialMenu').fadeIn('fast'); /*** Adds small menu icons ***/
@@ -63,14 +30,9 @@ var linkClick = true;
 		$('head').append('<style type="text/css">@media all and (min-width: 768px) and (max-width:939px){ .nav {width: 0} #wrapper{display: contents}}</style>');
 		/****** Desktop ******/
 		$('head').append('<style type="text/css">@media screen and (min-width:940px){ .nav { width: 2.5vw} #wrapper{margin-left: 0%}}</style>');
-<<<<<<< HEAD
-	});
-
-=======
 	}
 	closeNav.on('click', onClick);
-	
->>>>>>> b80834c7db506a38b48cbe741d476f5428e1937a
+
 	$('#openNavMobile').click(function(){/** Nav Click function***/
 		$('.nav').css("width", "100%"); /*** decreases size of main page***/
 		$('#wrapper').fadeOut(1000);
@@ -83,25 +45,18 @@ var linkClick = true;
 		$('#wrapper').fadeIn(1000);
 		/****** Phone ******/
 	});
-<<<<<<< HEAD
 
-	/**if ( $(window).width()>950){**/
-
-=======
-	
 	var linkClick = $('#fullMenu a');
 	linkClick = true;
-	
+
 	$('#fullMenu').click(function(){
 		if (linkClick === true){
 			onClick();
 		}
 	});
-	
-	
-	if ( $(window).width()>950){
-	
->>>>>>> b80834c7db506a38b48cbe741d476f5428e1937a
+
+	/**if ( $(window).width()>950){**/
+
 		$(window).scroll(function() {
 
 	 		if ($(document).scrollTop() > 500){
