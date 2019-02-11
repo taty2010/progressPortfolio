@@ -15,7 +15,6 @@ $(document).ready(function(){
 	});
 
 	var closeNav = $('#closeNav');
-
 	function onClick(){
 		$('#openNav').fadeIn("slow"); /*** Fades in burger menu ***/
 		$('nav').removeClass('oldNav'); /*** removes background image ***/
@@ -33,27 +32,36 @@ $(document).ready(function(){
 	}
 	closeNav.on('click', onClick);
 
-	$('#openNavMobile').click(function(){/** Nav Click function***/
+	var openNavMobile = $('#openNavMobile');
+	function openClickMobile(){/** Nav Click function***/
 		$('.nav').css("width", "100%"); /*** decreases size of main page***/
 		$('#wrapper').fadeOut(1000);
 		/****** Phone ******/
+	}
+	openNavMobile.on('click', openClickMobile);
 
-	});
-
-	$('#closeNavMobile').click(function(){/** Nav Click function***/
+	var closeNavMobile = $('#closeNavMobile');
+	function closeClickMobile(){/** Nav Click function***/
 		$('.nav').css("width", "0"); /*** decreases size of main page***/
 		$('#wrapper').fadeIn(1000);
 		/****** Phone ******/
-	});
+	}
+	closeNavMobile.on('click', closeClickMobile);
 
+/*** Close Menu when clicking on menu links (DESKTOP) ***/
 	var linkClick = $('#fullMenu a');
-	linkClick = true;
-
+ 	linkClick = true;
 	$('#fullMenu').click(function(){
 		if (linkClick === true){
 			onClick();
 		}
 	});
+
+var linkClickMobile = $('#fullMenuMobile a');
+linkClickMobile = true
+$('#fullMenuMobile').click(function(){
+		closeClickMobile();
+});
 
 	/**if ( $(window).width()>950){**/
 
