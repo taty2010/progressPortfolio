@@ -206,8 +206,11 @@ button {
 #partialMenu{
 	display: none;
 }
-
 #fullMenu{
+  display: none;
+}
+
+#fullMenuMobile{
   text-align: center;
 }
 
@@ -674,6 +677,12 @@ body {
     text-align: center;
 	}
 
+  #fullMenuMobile {
+    display: none;
+    padding-top: 18vh;
+    text-align: center;
+  }
+
 	#partialMenu{
 		display: block;
 		padding-top: 18.2vh;
@@ -911,7 +920,7 @@ body {
 	#html i, #css i, #design i {
 	font-size: 5.8vw;
 	margin-left: 0;
-	margin-top: 2.5;
+	margin-top: 5vh;
 	text-align: center;
 	}
 
