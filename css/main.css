@@ -108,7 +108,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+p{
+  font-size: 1em;
+}
 /* HEADER NAV */
 
 .nav {
@@ -237,8 +239,8 @@ button :hover {
 	display: grid;
 	grid-template-columns: 99.5vw;
   -ms-grid-columns: 99.5vw;
-	grid-template-rows: 98vh 70vh repeat(9, 50vh) 20vh;
-  -ms-grid-rows: 98vh 70vh (50vh)[9] 20vh;
+	grid-template-rows: 98vh 50vh repeat(9, 50vh) 20vh;
+  -ms-grid-rows: 98vh 50vh (50vh)[9] 20vh;
 	grid-template-areas:
 		"header"
 		"about"
@@ -350,8 +352,7 @@ header h1 {
 }
 
 #about h2 {
-  display: none;
-	color: #fff;
+  color: #d79292;
 	padding-left: 2vw;
 	font-family: 'Montserrat', sans-serif;
 	line-height: 8vh;
@@ -359,14 +360,12 @@ header h1 {
 }
 
 #about p{
-  display: none;
 	line-height: 5vh;
-	font-size: 5vw;
 	margin-bottom: 4.5vh;
 	padding-left: 2vw;
 	text-align: justify;
 	width: 85vw;
-	color: #383838;
+	color: #5a646f;
 }
 
 .photo {
@@ -594,11 +593,26 @@ a:hover {
     .sidenav a {font-size: 18px;}
 }
 
-@media screen and (min-width:940px) and (-webkit-min-device-pixel-ratio: 1) {
+@media all and (max-width: 767) {
+	html{
+		font-size: calc(14px + (36 - 14) * ((100vw - 320px) / (767 - 320)));
+	}
+}
+
+@media screen and (min-width:1024px) and (-webkit-min-device-pixel-ratio: 1) {
     /* DESKTOP */
+
+    html{
+      font-size: calc(18px + (60 - 18) * ((100vw - 1025px) / (1900 - 1025)));
+    }
+
 body {
   margin: auto 0;
   padding: 0;
+}
+
+p{
+  font-size: 0.98em;
 }
 	about {
 		width: 97%;
@@ -614,8 +628,8 @@ body {
 	justify-items: stretch;
 	grid-template-columns: [c1]2vw [c2]31.6vw [c3]31.6vw [c4]31.6vw [c5]2vw;
   -ms-grid-columns: [c1]2vw [c2]31.6vw [c3]31.6vw [c4]31.6vw [c5]2vw;
-	grid-template-rows: [r1]98.5vh [r2]90vh repeat(3, 70vh) [r5]8.5vh;
-  -ms-grid-rows: [r1]98.5vh [r2]90vh (70vh)[3] [r5]8.5vh;
+	grid-template-rows: [r1]98.5vh [r2]98vh repeat(3, 70vh) [r5]8.5vh;
+  -ms-grid-rows: [r1]98.5vh [r2]98vh (70vh)[3] [r5]8.5vh;
 	grid-template-areas:
 		"header header header header header"
 		". about about about ."
@@ -675,7 +689,16 @@ body {
 		display: none;
 		padding-top: 18vh;
     text-align: center;
+    text-decoration: none;
 	}
+
+  #fullMenu ul{
+    padding: 0;
+  }
+
+  	#fullMenu ul li{
+list-style-type: none;
+ }
 
   #fullMenuMobile {
     display: none;
@@ -702,7 +725,7 @@ body {
 	}
 
 	.nav a {
-    padding: 6.5vh 0 0 1.8vw;
+    padding: 4.5vh 0 0 1.8vw;
     text-decoration: none;
     font-size: 3vw;
     color: #fff;
@@ -830,25 +853,21 @@ body {
 	}
 
 	#about h2 {
-    display: none;
 	color: #d79292;
-	padding-left: 5vw;
+	padding-left: 2.5vw;
 	font-size: 5vw;
-	width: 45vw;
+	width: 50vw;
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-weight: bolder;
 	}
 
 	#about p{
-    display: none;
-	color: #383838;
-	line-height: 7.5vh;
-	font-size: 2.6vw;
-	padding-left:5vw;
+	color: #5a646f;
+	line-height: 7.9vh;
+	padding-left:1.5vw;
 	margin-bottom: 4.5vh;
 	text-align: justify;
-	font-weight:700;
-	width: 45vw;
+	width: 58vw;
 	font-family: 'Montserrat', sans-serif;
 	}
 
@@ -869,13 +888,15 @@ body {
 
 	.photo {
 	display: block;
-	padding-left: 30vw;
+	padding-left: 35vw;
 	order: 2;
   -webkit-box-ordinal-group: 3;
 	-ms-flex-order: 2;
-	width: 30vw;
-  height: 50vh;
-  max-height:50vh;
+  height: 50vw;
+  min-width: 200px;
+  min-height: 200px;
+	max-height:300px;
+  max-width:300px;
 	margin-top: 15vh;
 	margin-right: 20vw;
 	}
@@ -1003,7 +1024,7 @@ body {
 		margin-left: 3.4vw;
 	}
 	#contact-info{
-		padding: 2.3vh 0 0 8.5vw;
+		padding: 1vh 0 0 8.5vw;
 	}
 
 	#contact a{
@@ -1015,7 +1036,54 @@ body {
 }
 
 /****** TABLET******/
-@media screen and (min-width: 768px) and (max-width: 939px) and (orientation:landscape){
+@media screen and (width: 1024px){
+  .gridLayout {
+    transition: margin-left .5s;
+    -webkit-transition: margin-left .5s;
+    -o-transition: margin-left .5s;
+  display: grid;
+  display: -ms-grid;
+  justify-items: stretch;
+  grid-template-columns: [c1]2vw [c2]31.6vw [c3]31.6vw [c4]31.6vw [c5]2vw;
+  -ms-grid-columns: [c1]2vw [c2]31.6vw [c3]31.6vw [c4]31.6vw [c5]2vw;
+  grid-template-rows: [r1]98.5vh [r2]50vh repeat(3, 50vh) [r5]8.5vh;
+  -ms-grid-rows: [r1]98.5vh [r2]50vh (50vh)[3] [r5]8.5vh;
+  grid-template-areas:
+    "header header header header header"
+    ". about about about ."
+    ". port1 port2 port3 ."
+    ". port4 port5 port6."
+    ". work1 work2 work3 ."
+    "footer footer footer footer footer";
+  }
+
+  #about p {
+    line-height: 6vh;
+  }
+
+  #html, #css, #design {
+    height: 25vh;
+  }
+
+  #html p, #css p, #design p {
+    line-height: 2.5vh;
+  }
+
+
+#contact-info {
+    padding-top: 3.5vh;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+  html{
+		font-size: calc(14px + (48 - 14) * ((100vw - 768px) / (1023 - 768)));
+	}
+
+  p{
+  font-size: 1em;
+}
 
 	#openNavMobile {
 	position: fixed;
@@ -1033,6 +1101,8 @@ body {
 		display: grid;
 	grid-template-columns: 99.5vw;
 	grid-template-rows: 98vh 70vh repeat(9, 60vh) 15vh;
+  -ms-grid-columns: 99.5vw;
+  -ms-grid-rows: [r1]98vh [r2]70vh (60vh)[9] [r5]15vh;
 	grid-template-areas:
 		"header"
 		"about"
@@ -1093,7 +1163,6 @@ body {
   }
 /*** ABOUT SECTION ***/
 	#about{
-		margin-top: 5vh;
 		margin-bottom: 5vh;
 	}
 
@@ -1104,8 +1173,7 @@ body {
 
 	#about p {
 		padding-left: 6vw;
-		line-height: 6vh;
-		font-size: 3.5vw;
+		line-height: 6.8vh;
 		margin-bottom: 4.5vh;
 	}
 
