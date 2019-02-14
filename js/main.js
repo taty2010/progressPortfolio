@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
 	$('#openNav').click(function(openNavClick){/** Nav Click function***/
@@ -63,22 +64,5 @@ $('#fullMenuMobile').click(function(){
 		closeClickMobile();
 });
 
-	/**if ( $(window).width()>950){**/
-
-		$(window).scroll(function() {
-
-	 		if ($(document).scrollTop() > 500){
-		 		/**$('#about').css({ 'margin-bottom': '-129vh', 'margin-top': '99vh', 'transition': '1.5s'});**/
-		 		$('#about p, #about h2').fadeIn(2000);
-		 		/***$('#about').addClass('drip');***/
-     		}
-
-			else {
-				/**$('#about').css({'margin-bottom': '3vh', 'margin-top': '3vh', 'transition': '3s' });**/
-				/*****$('#about').removeClass('drip');**/
-				}
-	});
-
-	/**}**/
 
 });
