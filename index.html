@@ -1,22 +1,23 @@
-<!doctype html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN>
 <html class="no-js" lang="">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
+  <title>Tatyana Olvera</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link href="http://www.w3.org/TR/html4/strict.dtd">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/fontawesome-all.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300|Roboto" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">
 
 </head>
 	<body>
@@ -26,101 +27,138 @@
 
   <!-- Add your site or application content here -->
 		<header>
-			<div class="full-width" id ="bar">
+			<div class="full-width" id ="bar" >
 				<nav id="sideNav" class="nav">
+					<button type="button" id="openNav"><i class="fas fa-arrow-alt-circle-right"></i></button>
+					<div id="smallNav" class="smallNav"></div>
 					<button class="closebtn" id="closeNav"><i class="far fa-times-circle"></i></button>
 					<button class="closebtn" id="closeNavMobile"><i class="far fa-times-circle"></i></button>
-					<div class="portrait">
-						<svg height="250" width="250" viewBox="-8 7.5 100 100" mar>
-  							<circle cx="50" cy="50" r="40" stroke="black" stroke-width="1" fill="grey" />
-							<text x="32" y="55" font-family="Montserrat', sans-serif" font-size="10" fill="pink" >PHOTO </text>
-						</svg></div>
+					<img src="img/photo.png" alt="Personal Photo" class="menuPhoto">
+					<div id="partialMenu">
+						<a href="#about" alt="About Me"><i id="aboutIcon" class="fas fa-user-circle"></i></a>
+						<a href="#html" alt="Skills"><i id="htmlIcon" class="fas fa-file-code"></i></a>
+						<a href="#spiritedAway" alt="My Portfolio"><i class="fas fa-briefcase"></i></a>
+						<a href="#contact" alt="Contact Me"><i class="fas fa-envelope"></i></a>
+					</div>
+
+					<div id="fullMenu">
+            <ul>
+              <li><a href="#about">About</a></li>
+						  <li> <a href="#html">Skills</a></li>
+						  <li><a href="#spirited-away">Portfolio</a></li>
+						  <li> <a href="#contact">Contact</a></li>
+        </ul>
+					</div>
+          <div id="fullMenuMobile">
+            <li>
 						<a href="#about">About</a>
-						<a href="#html">Work</a>
+						<a href="#html">Skills</a>
+						<a href="#spirited-away">Portfolio</a>
 						<a href="#contact">Contact</a>
-						<a href="portfolio/index.html">Portfolio</a>
-						
+          </li>
+					</div>
 				</nav>
 				</div>
-	
+
 		</header>
-		
-	
-		
 		<main id="wrapper" class="gridLayout">
-			
+
 			<header id="mainHeader">
 				<div class="hero">
 					<div class="layer"></div>
-					<button type="button" id="openNav"><i class="fas fa-bars" alt="menu"></i></button>
-					<button type="button" id="openNavMobile"><i class="fas fa-bars" alt="menu"></i></button>
+					<button type="button" id="openNavMobile"><i class="fas fa-bars"></i></button>
 					<div class="heroText">
 						<h1 class="name">My<br> <span class="front">Front-End</span> <br> developer <br>Journey </h1>
 						<!---<h3 class="work"><span class="jobTitle">Current: </span> Web Content Editor</h3>
 						<h3 class="work"><span class="jobTitle">Future: </span> Front-End Developer</h3>--->
+						<button type="button" id="down"><a href="#about"> <i class="fas fa-chevron-circle-down"></i></a></button>
 					</div>
 				</div>
 			</header>
-			
 			<section id="about" >
 				<div class="aboutTitle">
-					<h2>About Me</h2>
+					<h2>Hello,</h2>
+						<p>My name is Tatyana Olvera and I am a Web Content Editor based in Dallas, TX. I am currently in the process of becoming a Front-End Developer. If I'm not working on a website you might find me painting. </p>
+					<p id="skillsSection"><span class="skills"> My Skills: HTML/CSS and Javascript/Jquery</span></p>
 				</div>
-				<div class="full-width">
+				<img src="img/photo.png" alt="Personal Photo" class="photo">
+				<!--<div class="full-width">
     				<div class="left">
 						<p class="aboutP">I currently reside in Texas with my husband and fur-baby. I recieved my BFA from the Univeristy of Texas at Arlington but have always had an dream to become a developer. I first learned about coding almost 14 years ago and ever since then I've wanted to learn how to build a website from the ground up, but I initially didn't know where to start.</p>
 					</div>
 					<div class="right">
 						<p class="aboutP"> I am currenly taking an online course with Skillcrush and am using other resources that are giving me the knowledge that I need, which wll help me to one day become a full-time Front End Developer. I hope to use this page as a portfolio to not only see the progress for myself but to show people that you can do anything once you put your mind to it.</p>
 					</div>
-				</div>
+				</div>-->
+				<!--<div class="photo"><img src="img/photo.png"></div>-->
 			</section>
-			
-				
-			<section id="html" class="third-width">		
+			<section id="html" class="third-width">
 				<h3><i class="fab fa-html5"></i></h3>
-				<p>My focus is writing clean, well<br>-formatted, semantic HTML5 by hand<br> to make sure that the content is easy<br> to read, easy to collaborate,<br> trouble-shoot and accessible.</p>
+				<p>My goal is to write clean, well<br>-formatted, semantic HTML5 by hand<br> to make sure that the content is easy<br> to read, easy to collaborate,<br> trouble-shoot and accessible.</p>
 			</section>
-			
+
 			<section id="css" class="third-width">
 				<h3><i class="fab fa-css3"></i></h3>
-				<p>I pride myself on writing CSS that is<br> easy to read and build on. I focus on<br> keeping my CSS lean and fast to load,<br> and I make it a habit to stay up to<br> date on current best practices.</p>
+				<p>I  want to pride myself on writing CSS <br>that is easy to read and build on. I <br>focus on keeping my CSS lean and <br>fast to load, and I make it a habit <br>to stay up to date on current <br>best practices.</p>
 			</section>
-			
+
 			<section id="design" class="third-width">
 				<h3><i class="fas fa-pen-nib"></i></h3>
-				<p>You can trust me to take a designer's<br> PSD and quickly &amp; accurately convert<br> it into a webpage that is pixel-perfect<br> match.</p>
+				<p>I want you to trust me to take a designer's<br> PSD and quickly &amp; accurately convert<br> it into a webpage that is pixel-perfect<br> match.</p>
 			</section>
-				
-			
-				<section id="port1" class="third-width2">		
+
+			<div id="portDesc1" class="third-width2">
 				<h3>Samsung S9 Life</h3>
-				<div id="samsung"></div>
+				<p>This website was created to be a personal portfolio for photographs I have take with my Samsung S9</p>
+			</div>
+				<section id="port1" class="third-width2">
+				<div id="samsung"><a href="samsung-portfolio/index.html"><img src="img/screencapture-file-C-Users-tnovell-Desktop-Samsung-Profolio-index-html-2018-12-06-15_54_22.png" alt="Samsung S9 Photography"></a></div>
 				</section>
-			
-				<section id="port2" class="third-width2">
+
+			<div id="portDesc2" class="third-width2">
 				<h3>Unplugged</h3>
-					<div id="unplugged"></div>
+				<p>The Unplugged website was a SkillCrush class asignment that focused on creating a responsive website with a mobile first approach usin gonly HTML and CSS </p>
+			</div>
+				<section id="port2" class="third-width2">
+					<div id="unplugged"><a href="unplugged/index.html"><img src="img/unplugged.png" alt="Unplugged"></a></div>
 				</section>
-			
+
+			<div id="portDesc3" class="third-width2">
+				<h3>Spirited Away</h3>
+			</div>
 				<section id="port3" class="third-width2">
-				<h3>Spirited Away </h3>
-					<div id="spiritedAway"></div>
+					<div id="spiritedAway"><a href="spirited-away/main.html"><img src="img/spirited-away.png" alt="FCC Spirited Away"></a></div>
 				</section>
-			
-			
+
+			<div id="portDesc4" class="third-width2">
+				<h3>101 {rpject</h3>
+			</div>
+				<section id="port4" class="third-width2">
+					<div id="101-project"><a href="101-project/index.html"><img src="img/screencapture-file-C-Users-tnovell-Desktop-101-project-code-index-html-2018-12-11-10_44_31.png" alt="Portfolio Project"></a></div>
+				</section>
+
+			<div id="portDesc5" class="third-width2">
+				<h3>Lol-Cat</h3>
+			</div>
+				<section id="port5" class="third-width2">
+					<div id="lolcat"><a href="lol-cat/index.html"><img src="img/screencapture-file-C-Users-tnovell-Desktop-lolcat-index-html-2018-12-11-10_41_43.png" alt="lol Cat"></a></div>
+				</section>
+
+			<div id="portDesc6" class="third-width2">
+				<h3>Lol-Cat</h3>
+			</div>
+				<section id="port6" class="third-width2">
+					<div id="maps"><a href="unplugged-retreat/index.html"><img src="img/unplugged-retreat.png" alt="Unplugged Retreat"></a></div>
+				</section>
 			<footer id="contact">
 					<div class="full-width">
 						<div id="contact-info">
-							
-								<a href="www.twitter.com"><i class="fab fa-twitter"></i></a>
-								<a href="www.instagram.com"><i class="fab fa-instagram"></i></a>
-								<a href="www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
-								<a href="www.github.com"><i class="fab fa-github"></i></a>
-							
+								<a href="https://twitter.com/tatynovell"><i class="fab fa-twitter"></i></a>
+								<a href="https://www.instagram.com/taty2020/?hl=en"><i class="fab fa-instagram"></i></a>
+								<a href="https://www.linkedin.com/in/tatyana-novell-b0168bb1/"><i class="fab fa-linkedin-in"></i></a>
+								<a href="https://github.com/taty2010"><i class="fab fa-github"></i></a>
 						</div>
 					</div>
-				</div>
 			</footer>
 		</main>
 		<script src="js/vendor/modernizr-3.6.0.min.js"></script>
